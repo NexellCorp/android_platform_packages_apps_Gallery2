@@ -92,7 +92,9 @@ public class GalleryUtils {
         int maxPixels = Math.max(metrics.heightPixels, metrics.widthPixels);
 
         // For screen-nails, we never need to completely fill the screen
-        MediaItem.setThumbnailSizes(maxPixels / 2, maxPixels / 5);
+        // psw0523 fix for bitmap rendering
+        // MediaItem.setThumbnailSizes(maxPixels / 2, maxPixels / 5);
+        MediaItem.setThumbnailSizes(maxPixels, maxPixels / 5);
         TiledScreenNail.setMaxSide(maxPixels / 2);
     }
 
